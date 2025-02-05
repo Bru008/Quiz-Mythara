@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #0b0b0d, #1e1e23);
-    color: #f4f4f9;
+    background-image: url(imagesStyle/Guia\ rápido\ .png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,7 +14,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(imagesStyle/fundoQuestão.png);
     border-radius: 10px;
     padding: 20px;
     width: 80%;
@@ -23,25 +24,38 @@ body {
 
 .intro-container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 20px;
+    background-image: url(imagesStyle/fundoComeço.png);
+    background-size: cover;
+    padding: 10px;
     width: 80%;
     max-width: 500px;
+    border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 h1, h2 {
-    color: #ffd700; /* Dourado */
+    color: #57c8fd; /* Dourado */
+    font-family: 'Ballkids Game', sans-serif;
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));                                      
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.mythara{
+    color: #7c4cc9;
+    font-family: 'Qotaro', sans-serif;
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
 }
 
 p {
-    color: #b5d6f8; /* Azul bebê */
+    color: #1d3753;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-size: larger;  
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
 }
 
 .option, .start-button {
-    background: #ffd700;
-    color: #0b0b0d;
+    background: #91ecf8c5;
+    color: #222222;
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -51,7 +65,7 @@ p {
 }
 
 .option:hover, .start-button:hover {
-    background: #b89c30;
+    background: #66dff5;
 }
 
 .essences {
@@ -64,8 +78,9 @@ p {
 .essence-image {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    border: 2px solid #ffd700;
+    border-radius: 20%;
+
+    background-color: #ffffff;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -73,10 +88,11 @@ p {
 .essence-image:hover {
     transform: scale(1.2);
 }
+
 /* Botões do resultado */
 #result-container button {
     display: inline-block;
-    background: linear-gradient(120deg, #ff8c00, #ffcd3c);
+    background: linear-gradient(120deg, #27ecdc93, #3cc1ff94);
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -101,8 +117,8 @@ p {
 
 /* Estilo do progresso */
 #progress {
-    font-size: 18px;
-    color: #ffd700;
+    font-size: 25px;
+    color: #0064b6;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -120,4 +136,10 @@ p {
     justify-content: center;
     justify-items: center;
     align-items: center;
+}
+
+.item{
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Ysabeau Office', sans-serif;
 }

@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mythara - Descubra sua Essência</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/qotaro" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ballkids-game" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ysabeau-office" rel="stylesheet">
+                
 </head>
 <body>
     <!-- Página de Introdução -->
     <div class="intro-container" id="intro">
-        <h1>Bem-vindo a Mythara</h1>
+        <h1>Bem-vindo a <span class="mythara">Mythara</span> </h1>
         <p>Em Mythara, cada alma possui uma essência única. Descubra a sua e embarque em uma jornada de autoconhecimento.</p>
         
         <!-- Imagens das Essências -->
@@ -46,8 +50,8 @@
     <!-- Página de Resultados -->
     <div class="container" id="result-container" style="display: none;">
         <h2>Sua Essência é:</h2>
-        <img id="element-image" alt="Imagem da essência" style="width: 150px; height: 150px; margin-top: 10px;">
-        <p id="result"></p>
+        <img id="element-image" alt="Imagem da essência" style="width: 200px; height: 200px;">
+        <p id="result" style="margin-top: 5px;"></p>
         <p id="element-description"></p>
         <button id="retry-button" onclick="restartQuiz()">Refazer o Quiz</button>
         <button id="whatsapp-share" onclick="shareOnWhatsApp()">Compartilhar no WhatsApp</button>
