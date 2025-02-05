@@ -68,6 +68,8 @@ const images = {
 
 // Variáveis de controle
 let currentQuestionIndex = 0;
+let previousAnswers = [];
+
 let scores = {
     ilusao: 0,
     caos: 0,
@@ -78,6 +80,7 @@ let scores = {
     almas: 0,
     morte: 0,
 };
+
 
 // Função para atualizar o progresso
 function updateProgress() {
@@ -90,40 +93,31 @@ function loadQuestion() {
     const questionData = questions[currentQuestionIndex];
     document.getElementById("question").innerText = questionData.text;
     updateProgress(); // Atualiza o progresso sempre que a pergunta mudar
+    
+    // Atualiza a visibilidade do botão "Voltar"
+    document.getElementById("back-button").style.display = currentQuestionIndex > 0 ? "block" : "none";
 }
-
-// function shuffleArray(arr) {
-//     for (let i = arr.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [arr[i], arr[j]] = [arr[j], arr[i]]; // Troca os elementos
-//     }
-//   }
-  
-//   // Função para carregar os elementos aleatoriamente
-//   function loadRandomElements() {
-//     const container = document.getElementById('quiz-container');
-//     const items = Array.from(container.getElementsByClassName('item')); // Pega todos os elementos
-  
-//     shuffleArray(items); // Embaralha a lista de itens
-  
-//     // Limpa o container antes de adicionar os elementos embaralhados
-//     container.innerHTML = '';
-  
-//     // Adiciona os elementos embaralhados de volta no container
-//     items.forEach(item => {
-//       container.appendChild(item);
-//     });
-//   }
-  
-//   // Carrega os elementos aleatoriamente ao carregar a página
-//   window.onload = loadRandomElements;
 
 // Função para selecionar uma opção
 function selectOption(value) {
+    // Armazena a resposta anterior
+    if (previousAnswers[currentQuestionIndex] !== undefined) {
+        const previousValue = previousAnswers[currentQuestionIndex];
+        const effects = questions[currentQuestionIndex].essence;
+        for (let essence in effects) {
+            scores[essence] -= effects[essence] * previousValue; // Remove o efeito da resposta anterior
+        }
+        console.log(`Resposta anterior para a pergunta ${currentQuestionIndex}: ${previousValue}`);
+    }
+
+    // Armazena a nova resposta
+    previousAnswers[currentQuestionIndex] = value;
     const effects = questions[currentQuestionIndex].essence;
     for (let essence in effects) {
-        scores[essence] += effects[essence] * value;
+        scores[essence] += effects[essence] * value; // Aplica o efeito da nova resposta
     }
+    console.log(`Nova resposta para a pergunta ${currentQuestionIndex}: ${value}`);
+    console.log(`Scores após a resposta:`, scores);
 
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -131,8 +125,15 @@ function selectOption(value) {
     } else {
         showResult();
     }
+}
 
-    console.log(value)
+// Função para voltar à pergunta anterior
+function goBack() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        console.log(`Voltando para a pergunta ${currentQuestionIndex}`);
+        loadQuestion();
+    }
 }
 
 // Função para iniciar o quiz
