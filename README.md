@@ -10,3 +10,6 @@ Nesta versão os valores inseridos foram arrumados, um botão para voltar na per
 
 ## → Versão 0.3:
 Nesta versão a parte responsiva do código foi arrumada, permitindo que usuários de todos os tipos de dispositivos consigam ter uma boa experiência no site.
+
+## → Versão 0.4:
+Nesta versão o script foi ajeitado para que as perguntas sejam randomizadas para cada quiz feito. Também foi ajeitado pequenas partes dos textos que estavam dificeis de ler pelas cores escolhidas.
