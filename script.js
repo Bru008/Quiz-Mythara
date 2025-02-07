@@ -136,12 +136,23 @@ function goBack() {
     }
 }
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Embaralhar as perguntas antes de iniciar o quiz
+shuffleArray(questions);
+
 // Função para iniciar o quiz
 function startQuiz() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("quiz").style.display = "block";
     loadQuestion(); // Inicia carregando a primeira pergunta
 }
+
 
 // Função para mostrar o resultado
 function showResult() {
