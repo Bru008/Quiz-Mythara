@@ -2,13 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mythara - Descubra sua Essência</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/qotaro" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/ballkids-game" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/ysabeau-office" rel="stylesheet">
-                
 </head>
 <body>
     <!-- Página de Introdução -->
@@ -28,24 +27,23 @@
         <button class="start-button" onclick="startQuiz()">Iniciar Teste</button>
     </div>
 
-<!-- Página do Quiz -->
-<div class="container" id="quiz" style="display: none;">
-    <h1>Descubra sua Essência</h1>
-    <!-- Exibição do progresso -->
-    <p id="progress">1/27</p>
-    <div id="quiz-container">
-        <div id="question" class="item"></div>
-        <div id="options">
-            <button class="option" onclick="selectOption(2)">Concordo Completamente</button>
-            <button class="option" onclick="selectOption(1)">Concordo</button>
-            <button class="option" onclick="selectOption(0)">Neutro</button>
-            <button class="option" onclick="selectOption(-1)">Discordo</button>
-            <button class="option" onclick="selectOption(-2)">Discordo Completamente</button>
+    <!-- Página do Quiz -->
+    <div class="container" id="quiz" style="display: none;">
+        <h1>Descubra sua Essência</h1>
+        <!-- Exibição do progresso -->
+        <p id="progress">1/27</p>
+        <div id="quiz-container">
+            <div id="question" class="item"></div>
+            <div id="options">
+                <button class="option" onclick="selectOption(2)">Concordo Completamente</button>
+                <button class="option" onclick="selectOption(1)">Concordo</button>
+                <button class="option" onclick="selectOption(0)">Neutro</button>
+                <button class="option" onclick="selectOption(-1)">Discordo</button>
+                <button class="option" onclick="selectOption(-2)">Discordo Completamente</button>
+            </div>
+            <button id="back-button" class="option" onclick="goBack()">Voltar</button>
         </div>
-        <button id="back-button" class="option" onclick="goBack()">Voltar</button>
     </div>
-</div>
-
 
     <!-- Página de Resultados -->
     <div class="container" id="result-container" style="display: none;">
