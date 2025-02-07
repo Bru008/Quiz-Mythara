@@ -34,7 +34,7 @@ body {
 }
 
 h1, h2 {
-    color: #57c8fd; /* Dourado */
+    color: #1ba2e1;
     font-family: 'Ballkids Game', sans-serif;
     filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));                                      
     font-size: 60px;
@@ -47,7 +47,7 @@ h1, h2 {
 }
 
 p {
-    color: #1d3753;
+    color: #000000;
     font-family: 'Ysabeau Office', sans-serif;
     font-size: larger;  
     filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
@@ -107,13 +107,13 @@ p {
 }
 
 #result-container button:hover {
-    background: linear-gradient(120deg, #e67e22, #f1c40f);
+    background: linear-gradient(120deg, #27ecdb, #3cc1ff);
     transform: scale(1.1);
 }
 
 #result-container button:active {
     transform: scale(0.9);
-    background: linear-gradient(120deg, #c56b15, #e0a00b);
+    background: linear-gradient(120deg, #27ecdb, #3cc1ff);
 }
 
 /* Estilo do progresso */
