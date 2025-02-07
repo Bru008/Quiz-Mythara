@@ -7,3 +7,6 @@ Nesta versão temos apenas a seleção das opções e mostragem do resultado de 
 
 ## → Versão 0.2:
 Nesta versão os valores inseridos foram arrumados, um botão para voltar na pergunta anterior foi adicionado e o design foi completamente modificado para fazer mais sentido com a proposta.
+
+## → Versão 0.3:
+Nesta versão a parte responsiva do código foi arrumada, permitindo que usuários de todos os tipos de dispositivos consigam ter uma boa experiência no site.
